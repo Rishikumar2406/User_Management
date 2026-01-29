@@ -11,6 +11,6 @@ app.use(express.json());
 
 app.use("/api/users", require("./routes/userRoutes"));
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || 5000, () =>
   console.log(`Server running on port ${process.env.PORT}`)
 );
